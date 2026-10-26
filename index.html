@@ -1,0 +1,33 @@
+<div></div><!doctype html>
+<html lang="hi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0b1020">
+<title>SurSpace | Free Music</title>
+<style>
+:root{color-scheme:dark;--bg:#090d18;--panel:#121a2b;--muted:#9aa8c2;--text:#f4f7ff;--accent:#8b5cf6;--accent2:#22d3ee}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at top right,#20204a 0,transparent 40%),var(--bg);color:var(--text);font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+.wrap{width:min(1050px,92%);margin:auto}.top{padding:24px 0;display:flex;align-items:center;justify-content:space-between;gap:12px}.brand{font-size:1.35rem;font-weight:850;letter-spacing:-.04em}.brand span{color:var(--accent2)}.tag{font-size:.82rem;color:var(--muted)}
+.hero{padding:34px 0 26px}.eyebrow{color:var(--accent2);font-size:.8rem;font-weight:750;text-transform:uppercase;letter-spacing:.14em}.hero h1{font-size:clamp(2.1rem,6vw,4rem);line-height:1.04;letter-spacing:-.055em;margin:10px 0 14px;max-width:720px}.hero p{color:var(--muted);max-width:620px;margin:0 0 22px}.searchbox{display:flex;gap:10px;max-width:620px}.searchbox input{min-width:0;flex:1;background:#151d30;border:1px solid #303a52;border-radius:14px;padding:15px 16px;color:var(--text);font:inherit;outline:none}.searchbox input:focus{border-color:var(--accent2)}button,.download{border:0;border-radius:12px;background:linear-gradient(120deg,var(--accent),#5865f2);color:white;padding:11px 15px;font-weight:750;font:inherit;text-decoration:none;cursor:pointer}.sectionhead{display:flex;justify-content:space-between;align-items:end;gap:10px;margin:28px 0 14px}.sectionhead h2{font-size:1.3rem;margin:0}.count{color:var(--muted);font-size:.9rem}.songs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.song{background:linear-gradient(145deg,#151d30,#101626);border:1px solid #273149;border-radius:18px;padding:14px;display:flex;align-items:center;gap:13px;min-width:0}.cover{width:64px;height:64px;flex:none;border-radius:13px;background:linear-gradient(135deg,#5b21b6,#0891b2);display:grid;place-items:center;font-size:1.55rem;overflow:hidden}.cover img{width:100%;height:100%;object-fit:cover}.info{min-width:0;flex:1}.info h3{font-size:1rem;margin:0 0 3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.info p{font-size:.84rem;color:var(--muted);margin:0}.actions{display:flex;gap:7px;flex-wrap:wrap;margin-top:9px}.actions button,.actions a{font-size:.84rem;padding:7px 10px;border-radius:9px}.play{background:#25314a}.empty{grid-column:1/-1;text-align:center;padding:35px 12px;color:var(--muted);border:1px dashed #34415b;border-radius:16px}.player{position:sticky;bottom:0;margin-top:22px;background:#11182aee;backdrop-filter:blur(14px);border:1px solid #303a52;border-radius:18px;padding:14px;display:flex;gap:12px;align-items:center}.player .now{min-width:0;flex:1}.player strong{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.player small{color:var(--muted)}audio{width:min(48%,420px);height:38px}footer{padding:30px 0 45px;color:var(--muted);font-size:.82rem}.notice{border:1px solid #33415e;background:#111a2b;border-radius:14px;padding:13px 15px;color:#bdc9df;font-size:.88rem;margin-top:20px}.notice strong{color:white}
+@media(max-width:650px){.songs{grid-template-columns:1fr}.top{align-items:flex-start;flex-direction:column}.hero{padding-top:20px}.searchbox{flex-direction:column}.searchbox button{width:100%}.player{flex-wrap:wrap}.player .now{width:100%;flex:auto}audio{width:100%}.song{padding:12px}.cover{width:58px;height:58px}}
+</style>
+</head>
+<body>
+<header class="wrap top"><div class="brand">♫ <span>Sur</span>Space</div><div class="tag">Independent music • Listen & download</div></header>
+<main class="wrap">
+<section class="hero">
+<div class="eyebrow">Your music corner</div>
+<h1>Find your next<br>favorite sound.</h1>
+<p>Apne independent tracks ko yahan sunein aur download karein. Search karein, play dabayein, ya MP3 save karein.</p>
+<div class="searchbox"><input id="search" type="search" placeholder="Song ya artist search karein…" aria-label="Search songs"><button id="clear" type="button">Clear search</button></div>
+</section>
+<div class="sectionhead"><h2>Music library</h2><span id="count" class="count"></span></div>
+<section id="songs" class="songs" aria-live="polite"></section>
+<div class="player"><div class="now"><strong id="nowTitle">Abhi koi song play nahi ho raha</strong><small id="nowArtist">Song chunne ke liye Play dabayein</small></div><audio id="audio" controls preload="none"></audio></div>
+<div class="notice"><strong>Website owner ke liye:</strong> Apne MP3 files <code>songs/</code> folder mein rakhein aur neeche <code>script.js</code> mein unke naam add karein. Sirf woh music upload karein jise share/download karne ki permission aapke paas ho.</div>
+</main>
+<footer class="wrap">© <span id="year"></span> SurSpace. Artist rights ka samman karein. <br>Demo template: sample entries ko apne tracks se replace karein.</footer>
+<script src="script.js"></script>
+</body>
+</html>
